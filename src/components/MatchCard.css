@@ -1,0 +1,199 @@
+.match-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.competition-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.competition-emblem {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.competition-name {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.9rem;
+}
+
+.match-status {
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.match-teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.home-team {
+  justify-content: flex-start;
+}
+
+.away-team {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+.team-crest {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-name {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1.1rem;
+}
+
+.team-tla {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.match-score {
+  flex: 0 0 auto;
+  text-align: center;
+  min-width: 120px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.home-score,
+.away-score {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.score-divider {
+  font-size: 2rem;
+  color: #a0aec0;
+}
+
+.match-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3182ce;
+}
+
+.match-details {
+  padding: 15px 20px;
+  background: #f7fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.match-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.match-date {
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.match-venue {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.half-time-score {
+  margin-top: 10px;
+  text-align: center;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .match-teams {
+    padding: 20px 15px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .team {
+    width: 100%;
+    justify-content: center !important;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .away-team {
+    flex-direction: column;
+  }
+
+  .team-crest {
+    width: 50px;
+    height: 50px;
+  }
+
+  .team-name {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .match-score {
+    min-width: auto;
+  }
+
+  .home-score,
+  .away-score {
+    font-size: 2rem;
+  }
+}

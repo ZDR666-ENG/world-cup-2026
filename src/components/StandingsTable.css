@@ -1,0 +1,135 @@
+.standings-container {
+  margin-bottom: 40px;
+}
+
+.group-standings {
+  margin-bottom: 40px;
+}
+
+.group-title {
+  color: #2d3748;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3182ce;
+}
+
+.standings-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 0.95rem;
+}
+
+.standings-table th {
+  background: linear-gradient(135deg, #2c5282 0%, #2b6cb0 100%);
+  color: white;
+  padding: 12px 8px;
+  text-align: center;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.standings-table th.team {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.standings-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.standings-table td.team {
+  text-align: left;
+  padding-left: 15px;
+}
+
+.standings-table tr:hover {
+  background: #f7fafc;
+}
+
+.standings-table tr.qualified {
+  background: #f0fff4;
+}
+
+.standings-table tr.qualified:hover {
+  background: #e6ffed;
+}
+
+.position {
+  width: 40px;
+  font-weight: 600;
+}
+
+.team-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.team-crest {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.team-name {
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.played,
+.won,
+.drawn,
+.lost,
+.goals-for,
+.goals-against,
+.goal-difference {
+  width: 40px;
+  color: #4a5568;
+}
+
+.points {
+  width: 50px;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .standings-table {
+    font-size: 0.85rem;
+  }
+
+  .standings-table th,
+  .standings-table td {
+    padding: 10px 6px;
+  }
+
+  .team-crest {
+    width: 25px;
+    height: 25px;
+  }
+
+  .team-name {
+    font-size: 0.85rem;
+  }
+
+  .played,
+  .won,
+  .drawn,
+  .lost,
+  .goals-for,
+  .goals-against,
+  .goal-difference {
+    width: 30px;
+  }
+}

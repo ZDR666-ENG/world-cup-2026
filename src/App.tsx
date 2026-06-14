@@ -1,0 +1,43 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Matches from './pages/Matches';
+import Standings from './pages/Standings';
+import Teams from './pages/Teams';
+import Schedule from './pages/Schedule';
+import News from './pages/News';
+import './App.css';
+
+// 创建React Query客户端
+const queryClient = new QueryClient();
+
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <div className="app">
+          <Navbar />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/matches" element={<Matches />} />
+              <Route path="/standings" element={<Standings />} />
+              <Route path="/teams" element={<Teams />} />
+              <Route path="/schedule" element={<Schedule />} />
+              <Route path="/news" element={<News />} />
+            </Routes>
+          </main>
+          <footer className="footer">
+            <div className="footer-content">
+              <p>&copy; 2026 FIFA 世界杯数据网站. 保留所有权利.</p>
+              <p>数据来源: Football-Data.org</p>
+            </div>
+          </footer>
+        </div>
+      </Router>
+    </QueryClientProvider>
+  );
+}
+
+export default App;

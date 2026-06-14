@@ -1,0 +1,119 @@
+.team-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.team-card-header {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-card-crest {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.team-card-body {
+  padding: 20px;
+}
+
+.team-card-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.team-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: right;
+  max-width: 60%;
+}
+
+.team-card-footer {
+  padding: 15px 20px;
+  background: #f7fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.team-card-button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.team-card-button:hover {
+  background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .team-card-header {
+    padding: 20px;
+  }
+
+  .team-card-crest {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-card-name {
+    font-size: 1.1rem;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .detail-value {
+    text-align: left;
+    max-width: 100%;
+  }
+}
