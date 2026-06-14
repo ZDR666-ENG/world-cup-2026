@@ -79,8 +79,31 @@ export interface Player {
   dateOfBirth: string;
   nationality: string;
   position: string;
+  positionShort: string;
   shirtNumber: number;
-  lastUpdated: string;
+  team: {
+    id: number;
+    name: string;
+    shortName: string;
+    tla: string;
+    crest: string;
+  };
+  goals: number;
+  assists: number;
+  matchesPlayed: number;
+  rating: number;
+  photo: string;
+  highlights: string[];
+}
+
+export interface GoalScorer {
+  rank: number;
+  player: Player;
+  goals: number;
+  assists: number;
+  penalties: number;
+  matchesPlayed: number;
+  minutesPlayed: number;
 }
 
 export interface Competition {

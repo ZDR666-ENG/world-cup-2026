@@ -20,6 +20,8 @@ const Navbar: React.FC = () => {
     { path: '/matches', label: '比赛' },
     { path: '/standings', label: '积分榜' },
     { path: '/teams', label: '球队' },
+    { path: '/players', label: '球员' },
+    { path: '/goals', label: '射手榜' },
     { path: '/schedule', label: '赛程' },
     { path: '/news', label: '新闻' },
   ];
