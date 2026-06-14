@@ -17,7 +17,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router basename="/world-cup-2026">
+      <Router>
         <div className="app">
           <Navbar />
           <main className="main-content">
