@@ -1,6 +1,6 @@
 .teams-page {
   min-height: 100vh;
-  background: #f7fafc;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   padding: 40px 20px;
 }
 
@@ -11,9 +11,18 @@
 
 .page-title {
   font-size: 2.5rem;
-  color: #2d3748;
+  color: white;
   margin-bottom: 30px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.title-emoji {
+  font-size: 2rem;
 }
 
 .search-container {
@@ -21,25 +30,13 @@
   margin: 0 auto 40px;
 }
 
-.search-input {
+.search-container input {
   width: 100%;
-  padding: 15px 20px;
-  border: 2px solid #e2e8f0;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  background: white;
-  color: #2d3748;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: #3182ce;
-  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
-}
-
-.search-input::placeholder {
-  color: #a0aec0;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 .teams-grid {
@@ -48,31 +45,92 @@
   gap: 25px;
 }
 
-.no-data {
-  text-align: center;
-  padding: 60px;
-  color: #718096;
+.team-card {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-size: 1.2rem;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 加载状态 */
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.team-card-header {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 30px;
+  text-align: center;
+}
+
+.team-card-crest {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+}
+
+.team-card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-card-name {
+  font-size: 1.3rem;
+  color: #2d3748;
+  margin-bottom: 5px;
+}
+
+.team-card-tla {
+  color: #718096;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.team-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.team-card-footer {
+  padding: 15px;
+  background: #f7fafc;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+}
+
+.view-detail {
+  color: #f5576c;
+  font-weight: 600;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px;
+  color: white;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
 .loading-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 60vh;
-  background: #f7fafc;
 }
 
 .loading-spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid #e2e8f0;
-  border-top: 4px solid #3182ce;
+  border: 4px solid rgba(255,255,255,0.3);
+  border-top: 4px solid white;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 20px;
@@ -83,14 +141,12 @@
   100% { transform: rotate(360deg); }
 }
 
-/* 错误状态 */
 .error-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 60vh;
-  background: #f7fafc;
   text-align: center;
 }
 
@@ -99,38 +155,19 @@
   margin-bottom: 20px;
 }
 
-.error-container h2 {
-  color: #2d3748;
-  margin-bottom: 10px;
-}
-
-.error-container p {
-  color: #718096;
-  margin-bottom: 20px;
-}
-
 .error-container button {
-  padding: 10px 20px;
-  background: #3182ce;
-  color: white;
+  padding: 12px 25px;
+  background: white;
+  color: #f5576c;
   border: none;
-  border-radius: 6px;
+  border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
 }
 
-.error-container button:hover {
-  background: #2b6cb0;
-}
-
-/* 响应式设计 */
 @media (max-width: 768px) {
   .page-title {
     font-size: 2rem;
-  }
-
-  .search-container {
-    max-width: 100%;
   }
 
   .teams-grid {

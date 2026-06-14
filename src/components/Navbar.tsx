@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
 import './Navbar.css';
@@ -7,13 +7,12 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  useEffect(() => {
+    closeMenu();
+  }, [location]);
 
   const navItems = [
     { path: '/', label: '首页' },

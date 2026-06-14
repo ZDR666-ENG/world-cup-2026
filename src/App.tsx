@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Matches from './pages/Matches';
 import Standings from './pages/Standings';
 import Teams from './pages/Teams';
+import TeamDetail from './pages/TeamDetail';
 import Players from './pages/Players';
 import GoalScorers from './pages/GoalScorers';
 import Schedule from './pages/Schedule';
@@ -26,6 +27,7 @@ function App() {
               <Route path="/matches" element={<Matches />} />
               <Route path="/standings" element={<Standings />} />
               <Route path="/teams" element={<Teams />} />
+              <Route path="/team/:id" element={<TeamDetail />} />
               <Route path="/players" element={<Players />} />
               <Route path="/goals" element={<GoalScorers />} />
               <Route path="/schedule" element={<Schedule />} />
