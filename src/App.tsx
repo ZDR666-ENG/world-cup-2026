@@ -12,13 +12,12 @@ import Schedule from './pages/Schedule';
 import News from './pages/News';
 import './App.css';
 
-// 创建React Query客户端
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router>
+      <Router basename="/world-cup-2026">
         <div className="app">
           <Navbar />
           <main className="main-content">
@@ -36,7 +35,7 @@ function App() {
           </main>
           <footer className="footer">
             <div className="footer-content">
-              <p>&copy; 2026 FIFA 世界杯数据网站. 保留所有权利.</p>
+              <p>&copy; 2026 FIFA 世界杯数据网站</p>
               <p>数据来源: Football-Data.org</p>
             </div>
           </footer>
