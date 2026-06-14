@@ -63,7 +63,7 @@ const Home: React.FC = () => {
               <span className="stat-label">支球队</span>
             </div>
             <div className="stat-item">
-              <span className="stat-number">{goalScorers[0]?.goals || 0}</span>
+              <span className="stat-number">{goalScorers[0]?.goals ?? 0}</span>
               <span className="stat-label">最高进球</span>
             </div>
           </div>
